@@ -1,10 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import AppLayout from "./components/AppLayout";
+import DashboardPage from "./pages/DashboardPage";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import CssBaseline from "@mui/material/CssBaseline";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <CssBaseline />
+    <AppLayout>
+      <DashboardPage />
+    </AppLayout>
+  </React.StrictMode>
+);
